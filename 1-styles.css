@@ -1,0 +1,20 @@
+a {
+    text-decoration: none;
+    color: brown;
+}
+
+a::before {
+    content: '';
+    position: absolute;
+    text-decoration: none;
+    background-color: brown;
+    height: 2px;
+    width: 0;
+    transform: translateY(2.2ex);
+    transition: .5s ease-out;
+    transform-origin: left;
+}
+
+a:hover::before {
+    width: 9.5ch;
+}
