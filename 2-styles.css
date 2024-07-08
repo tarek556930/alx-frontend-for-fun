@@ -1,0 +1,52 @@
+.toggle-label {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 20px;
+    margin: 20px;
+    background-color: #ebebeb;
+    border-radius: 20px;
+    border: 1px solid lightgray;
+}
+
+.toggle-label::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid lightgray;
+    top: -6px;
+    left: -1px;
+    transition: all .3s;
+}
+
+.toggle-inner {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 0.9rem;
+  }
+
+.toggle-inner::before {
+    content: "Yes";
+    color: white;
+    padding: 6px;
+}
+
+.toggle-inner::after {
+    content: "No";
+    padding-left: 1px;
+    color: rgb(146, 139, 139);
+}
+
+.toggle-cb {
+    display: none;
+}
+
+.toggle-cb:checked + .toggle-label::after {
+    left: 33px;
+}
+
+.toggle-cb:checked + .toggle-label {
+    background-color: rgb(230, 74, 74);
+}
